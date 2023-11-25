@@ -1,15 +1,15 @@
 {
-  "name": "vue3-naver-maps",
+  "name": "vue3-reactive-naver-maps",
   "description": "NaverMap component for Vue3",
   "version": "4.2.0",
   "license": "MIT",
-  "main": "dist/vue3-naver-maps.cjs.js",
-  "module": "dist/vue3-naver-maps.esm.js",
-  "types": "dist/vue3-naver-maps.d.ts",
+  "main": "dist/vue3-reactive-naver-maps.cjs.js",
+  "module": "dist/vue3-reactive-naver-maps.esm.js",
+  "types": "dist/vue3-reactive-naver-maps.d.ts",
   "sideEffects": false,
   "files": [
     "dist/*.js",
-    "dist/vue3-naver-maps.d.ts",
+    "dist/vue3-reactive-naver-maps.d.ts",
     "README.md"
   ],
   "scripts": {
@@ -29,14 +29,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DongKyuuuu/vue3-naver-maps"
+    "url": "https://github.com/DongKyuuuu/vue3-reactive-naver-maps"
   },
   "author": {
     "name": "Dongkyuuuu",
     "email": "dongkyu.me@gmail.com"
   },
   "bug": {
-    "url": "https://github.com/Dongkyuuuu/vue3-naver-maps/issues",
+    "url": "https://github.com/Dongkyuuuu/vue3-reactive-naver-maps/issues",
     "email": "dongkyu.me@gmail.com"
   },
   "peerDependencies": {
@@ -56,7 +56,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/vue": "^6.6.1",
     "@types/jest": "^29.2.4",
-    "@types/navermaps": "^3.6.1",
+    "@types/navermaps": "^3.7.3",
     "@types/node": "^18.11.17",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-c8": "^0.26.2",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import { useLoad } from "@/composables/useLoad";
 import { addEventPolyline } from "@/composables/useEvent";
 import { UI_EVENT_POLYLINE } from "@/constants/events";
@@ -30,6 +30,9 @@ const useInitPolyline = (map: naver.maps.Map) => {
 
 onMounted(() => useLoad(useInitPolyline));
 onUnmounted(() => polyline.value && polyline.value.setMap(null));
+watch(path, (path) => {
+  polyline.value?.setPath(path as any);
+});
 </script>
 
 <template>

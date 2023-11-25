@@ -1,4 +1,6 @@
-# <h1>vue3-naver-maps</h1>
+# <h1>vue3-reactive-naver-maps</h1>
+
+**Forked from https://github.com/Dongkyuuuu/vue3-naver-maps** 의 reactive 개선 버전입니다.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/dongkyuuuu/vue3-naver-maps)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-naver-maps)

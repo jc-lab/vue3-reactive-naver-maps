@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import { useLoad } from "@/composables/useLoad";
 import { addEventPolygon } from "@/composables/useEvent";
 import { UI_EVENT_POLYGON } from "@/constants/events";
@@ -30,6 +30,9 @@ const useInitPolygon = (map: naver.maps.Map) => {
 
 onMounted(() => useLoad(useInitPolygon));
 onUnmounted(() => polygon.value && polygon.value.setMap(null));
+watch(paths, (paths) => {
+  polygon.value?.setPaths(paths as any);
+});
 </script>
 
 <template>

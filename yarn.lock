@@ -1481,12 +1481,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/navermaps@npm:^3.6.1":
-  version: 3.6.1
-  resolution: "@types/navermaps@npm:3.6.1"
+"@types/navermaps@npm:^3.7.3":
+  version: 3.7.3
+  resolution: "@types/navermaps@npm:3.7.3"
   dependencies:
     "@types/geojson": "*"
-  checksum: 0026cba49ad2c86e2c58f1a00ae6ec092fabbf7457f7faa3565f2e4c1805e585e287ab5b7cd2f7a770393464eae329e3cd41141805da7dc8486636ec9411975b
+  checksum: df72ed32f24f8fbdc02f65edaa21e40ea046275ad41af74e9b98e92c92a79bfb9264163fb100e33efe89036c6be0b4a454beac51f727d72ecfb4a88d317b2200
   languageName: node
   linkType: hard
 
@@ -8340,9 +8340,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue3-naver-maps@workspace:.":
+"vue3-reactive-naver-maps@workspace:.":
   version: 0.0.0-use.local
-  resolution: "vue3-naver-maps@workspace:."
+  resolution: "vue3-reactive-naver-maps@workspace:."
   dependencies:
     "@babel/types": ^7.19.0
     "@commitlint/cli": ^17.3.0
@@ -8354,7 +8354,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/vue": ^6.6.1
     "@types/jest": ^29.2.4
-    "@types/navermaps": ^3.6.1
+    "@types/navermaps": ^3.7.3
     "@types/node": ^18.11.17
     "@vitejs/plugin-vue": ^4.0.0
     "@vitest/coverage-c8": ^0.26.2

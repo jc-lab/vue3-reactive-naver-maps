@@ -14,9 +14,11 @@ const props = defineProps<{
   marker: naver.maps.Marker;
   open: boolean;
   options?: naver.maps.InfoWindowOptions;
+  latitude?: number;
+  longitude?: number;
 }>();
 
-const { marker, options, open } = toRefs(props);
+const { marker, options, open, latitude, longitude } = toRefs(props);
 const infoWindow = ref<naver.maps.InfoWindow>();
 const infoWindowElement = ref<HTMLDivElement>();
 
@@ -56,6 +58,13 @@ watch(
 );
 
 onUnmounted(() => infoWindow.value && infoWindow.value.close());
+watch([latitude!!, longitude!!], ([latitude, longitude]) => {
+  if (latitude && longitude) {
+    infoWindow.value?.setPosition(
+      new window.naver.maps.LatLng(latitude, longitude)
+    );
+  }
+});
 </script>
 
 <template>

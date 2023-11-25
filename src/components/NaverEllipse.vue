@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import { addEventEllipse } from "@/composables/useEvent";
 import { useLoad } from "@/composables/useLoad";
 import { UI_EVENT_ELLIPSE } from "@/constants/events";
@@ -27,6 +27,9 @@ const useInitEllipse = (map: naver.maps.Map) => {
 
 onMounted(() => useLoad(useInitEllipse));
 onUnmounted(() => ellipse.value && ellipse.value.setMap(null));
+watch(bounds, (bounds) => {
+  ellipse.value?.setBounds(bounds);
+});
 </script>
 
 <template>

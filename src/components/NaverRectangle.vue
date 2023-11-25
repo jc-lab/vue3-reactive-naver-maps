@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import { useLoad } from "@/composables/useLoad";
 import { addEventRectangle } from "@/composables/useEvent";
 import { UI_EVENT_RECTANGLE } from "@/constants/events";
@@ -27,6 +27,9 @@ const useInitRectangle = (map: naver.maps.Map) => {
 
 onMounted(() => useLoad(useInitRectangle));
 onUnmounted(() => rectangle.value && rectangle.value.setMap(null));
+watch(bounds, (bounds) => {
+  rectangle.value?.setBounds(bounds);
+});
 </script>
 
 <template>

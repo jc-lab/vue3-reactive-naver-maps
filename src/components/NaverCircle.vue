@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import { addEventCircle } from "@/composables/useEvent";
 import { useLoad } from "@/composables/useLoad";
 import { UI_EVENT_CIRCLE } from "@/constants/events";
@@ -30,6 +30,14 @@ const useInitCircle = (map: naver.maps.Map) => {
 
 onMounted(() => useLoad(useInitCircle));
 onUnmounted(() => circle.value && circle.value.setMap(null));
+watch([latitude, longitude], ([latitude, longitude]) => {
+  const obj = circle.value;
+  if (!obj) return;
+  obj.setCenter(new window.naver.maps.LatLng(latitude, longitude));
+});
+watch(radius!!, (radius) => {
+  circle.value?.setRadius(radius || 0);
+});
 </script>
 
 <template>

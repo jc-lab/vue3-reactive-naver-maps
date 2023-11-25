@@ -22,8 +22,3 @@ export type Layers =
   | "ENGLISH"
   | "CHINESE"
   | "JAPANESE";
-
-export interface MapOptions extends naver.maps.MapOptions {
-  latitude?: number;
-  longitude?: number;
-}

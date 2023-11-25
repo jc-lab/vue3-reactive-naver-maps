@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import { addEventMarker } from "@/composables/useEvent";
 import { useLoad } from "@/composables/useLoad";
 import { UI_EVENT_OBJECT } from "@/constants/events";
@@ -40,6 +40,9 @@ onMounted(() => useLoad(useInitMarker));
 onUnmounted(() => {
   marker.value?.setMap(null);
   marker.value = undefined;
+});
+watch([latitude, longitude], ([latitude, longitude]) => {
+  marker.value?.setPosition(new window.naver.maps.LatLng(latitude, longitude));
 });
 </script>
 
