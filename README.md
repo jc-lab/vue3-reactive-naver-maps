@@ -8,7 +8,7 @@
 
 문서는 [Documentation](https://dongkyuuuu.github.io/vue3-naver-maps/)에서 확인 가능합니다.
 
-4.x 버전으로 업데이트 되었습니다. 3.x이전 버전 사용자는 사용에 변경사항이 있으니 [3.x 버전으로 부터 마이그레이션](https://dongkyuuuu.github.io/vue3-naver-maps/migrations/from3.html) 문서를 참고해주세요.
+1.x 버전은 vue3-naver-maps 4.2.0 버전 기반입니다.
 
 ## Introduce
 
